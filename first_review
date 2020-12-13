@@ -20,7 +20,7 @@ def validate(var1):
         print('Password should have at least one lowercase letter')
         var2 = 0
     if not any(char in symbol for char in var1):
-        print('Password should have at least one of the symbols $@#')
+        print('Password should have at least one of the symbols $ @ # !')
         var2 = 0
     if var2:
         return var2
@@ -32,6 +32,6 @@ def main():
     if(validate(var1)):
         print("Password is Valid")
     else:
-        print("Invalid Password!!")
+        print("Invalid Password...!!")
 if __name__ == '__main__':
     main()
