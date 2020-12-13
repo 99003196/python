@@ -1,0 +1,55 @@
+class validation:
+
+    def lower(self):
+        lower_case = any(char.islower() for char in self.passcode)
+        return lower_case
+
+    def upper(self):
+        upper_case = any(char.isupper() for char in self.passcode)
+        return upper_case
+
+    def number(self):
+        num = any(char.isdigit() for char in self.passcode)
+        return num
+
+    def spl(self):
+        sym = any['!', '@', '#', '$', '%', '&', '*', '?']
+
+
+class trial(validation):
+    def __init__(self):
+        self.passcode = input()
+        self.var2 = 1
+
+    def check(self):
+        lower_case = obj1.lower()
+        upper_case = obj1.upper()
+        num = self.number()
+        length = len(self.passcode)
+        self.obj1 = self.sym()
+        if length < 8:
+            print("Your password should have minimum of 8 letters")
+        elif length > 20:
+            print("Your password exceeded the maximum number of characters")
+        else:
+            var2 = lower_case and upper_case and num
+            if var2:
+                print("Valid Password..!!!")
+            elif not lower_case:
+                print("Should have atleast one lower case letter")
+            elif not upper_case:
+                print("Should have atleast one upper case letter")
+            elif not num:
+                print("should have atleast one number")
+            elif not var:
+                print("Should have atleast one symbol")
+            else:
+                pass
+
+    class sym:
+        def spl(self):
+            var = any['!', '@', '#', '$', '%', '&', '*', '?']
+            return var
+
+obj1 = trial()
+obj1.check()
